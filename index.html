@@ -1,100 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- META TAGS: Basic information about the webpage -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Jones Kwamehene </title>
-    
+    <title>Jones Kwamehene | Data Analyst & Tech Professional</title>
     <link rel="icon" type="image/png" href="assets/jones log.png">
     
-    <!-- GOOGLE ANALYTICS: Tracks website visitors and behavior -->
-    <!-- Replace YOUR_GA_ID with your actual Google Analytics tracking ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_ID');
-    </script>
-    
-    <!-- CUSTOM VISITOR TRACKING: Simple analytics for demonstration -->
-    <script>
-        // This script logs page visits to browser's local storage
-        // In production, you'd send this data to your analytics server
-        (function() {
-            const visitData = {
-                timestamp: new Date().toISOString(),
-                page: window.location.pathname,
-                referrer: document.referrer,
-                userAgent: navigator.userAgent
-            };
-            
-            // Store visit data locally (replace with your analytics endpoint)
-            const visits = JSON.parse(localStorage.getItem('portfolio_visits') || '[]');
-            visits.push(visitData);
-            localStorage.setItem('portfolio_visits', JSON.stringify(visits));
-            
-            console.log('Visit tracked:', visitData);
-        })();
-    </script>
-    
-    <!-- EXTERNAL FONTS: Google Fonts for professional typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- FONT AWESOME: Icons for visual elements throughout the site -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- MAIN STYLESHEET: Link to external CSS file -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="responsive-section">
-    <!-- NAVIGATION BAR: Fixed header with site navigation -->
-    <!-- This stays at the top of the page and provides navigation links -->
-    <nav class="navbar">
-    <div class="container">
-        <div class="nav-container">
-           <div class="logo-container">
-                <img src="assets/jones log.png" alt="Jones Logo" class="logo-image">
-                 <p class="logo-text">Jones Yaw Kwamehene</p>
+    <!-- Floating Particles Background -->
+    <div class="floating-particles" id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="assets/jones log.png" alt="Jones Logo" class="logo-image">
+                    <p class="logo-text">Jones Yaw Kwamehene</p>
                 </div>
-
                 
-                <!-- NAVIGATION MENU: Main site navigation links -->
                 <ul class="nav-menu" id="navMenu">
-    <li><a href="#home" class="nav-link">Home</a></li>
-    <li><a href="#about" class="nav-link">About</a></li>
-    <li><a href="#projects" class="nav-link">Projects</a></li>
-    
-    <li class="nav-dropdown-item">
-    <button class="nav-link dropdown-btn" id="resourcesBtn">
-        Resources 
-        <i class="fas fa-caret-down"></i> 
-    </button>
-    
-    <div class="dropdown-content nav-dropdown-menu" id="navDropdownMenu">
-        
-        <a href="#certifications" class="dropdown-link">
-            <i class="fas fa-graduation-cap"></i> Certifications 
-        </a>
-        
-        <a href="assets/Jones_ YAW_Kwamehene_CV_ DA_ Employment .docx.pdf" target="_blank" class="dropdown-link">
-            <i class="fas fa-file-pdf"></i> Resume
-        </a>
-        
-        <a href="assets/bio.pdf" target="_blank" class="dropdown-link">
-            <i class="fas fa-user-circle"></i> Bio
-        </a>
-        
-    </div>
-</li>
-
-    <li><a href="#contact" class="nav-link">Contact</a></li>
-    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button></li>
-</ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button></li>
+                </ul>
                 
-                <!-- MOBILE MENU BUTTON: Hamburger menu for mobile devices -->
                 <button class="mobile-toggle" id="mobileToggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -102,92 +42,110 @@
         </div>
     </nav>
 
-   <!-- HERO SECTION: Main landing area with introduction -->
-<!-- This is the first thing visitors see - it should grab their attention -->
-<section id="home" class="hero">
-
-    <!-- Tech Background Icons (watermark) -->
-    <div class="hero-icon-bg">
-        <i class="fab fa-python"></i>
-        <i class="fas fa-shield-alt"></i>
-        <i class="fas fa-microchip"></i>
-    </div>
-
-    <div class="container">
-        <div class="hero-content">
-            <!-- LEFT SIDE: Text content and call-to-action buttons -->
-            <div class="hero-text">
-            <h1 class="shimmer">Tech & Innovation</h1>
-                <p class="subtitle">Transforming businesses through technology</p>
-                <p>Focused on Data Analytics, AI & Information Technology, Cybersecurity, and AgriTech — delivering smart, secure, and impactful solutions</p>
-                
-                <!-- CALL-TO-ACTION BUTTONS: Direct users to key sections -->
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i>
-                        View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
-                </div>
-            </div>
-            
-            <!-- RIGHT SIDE: Profile image or placeholder -->
-            <div class="hero-image">
-                <div class="profile-image-container">
-                    <div class="profile-image">
-                        <img src="assets/jones pic.JPG" alt="Jones" />
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-icon-bg">
+            <i class="fab fa-python"></i>
+            <i class="fas fa-shield-alt"></i>
+            <i class="fas fa-microchip"></i>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">👋 Welcome to my portfolio</div>
+                    <h1 class="shimmer">Tech & Innovation</h1>
+                    <div class="typing-container">
+                        <span id="typed-text">Data Analyst</span>
+                        <span class="typing-cursor">|</span>
                     </div>
-                    <h2 class="profile-name">Jones Yaw Kwamehene</h2>
+                    <p>Focused on Data Analytics, AI & Information Technology, Cybersecurity, and AgriTech — delivering smart, secure, and impactful solutions</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="profile-image-container">
+                        <div class="profile-image">
+                            <img src="assets/jones pic.JPG" alt="Jones" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram stat-icon"></i>
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-award stat-icon"></i>
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-code stat-icon"></i>
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">GitHub Commits</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-zap stat-icon"></i>
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Dedication</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- ABOUT SECTION: Detailed information about background and expertise -->
-    <!-- This section builds trust and credibility with visitors -->
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <!-- SECTION HEADER: Title and subtitle for the section -->
+            <h2 class="section-title">About Me</h2>
+            <div class="section-underline"></div>
+            
             <div class="about-content">
-                <!-- LEFT SIDE: About image/avatar -->
                 <div class="about-image">
                     <div class="about-avatar">
-                    
                         <img src="assets/tech1.png" alt="Tech Avatar" />
                     </div>
                 </div>
-                <!-- RIGHT SIDE: Detailed about text and expertise areas -->
-                <div class="about-text">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate about leveraging technology to solve real-world problems.</p>
                 
+                <div class="about-text">
                     <p>
-                         As a <strong>Data Analyst</strong> with a passion for turning complex datasets
+                        As a <strong>Data Analyst</strong> with a passion for turning complex datasets
                         into clear, actionable business intelligence, I specialize in the full end-to-end
-                         data lifecycle. My core expertise lies in preparing raw data, uncovering hidden
-                         trends through advanced analysis, and building powerful visualizations that drive
+                        data lifecycle. My core expertise lies in preparing raw data, uncovering hidden
+                        trends through advanced analysis, and building powerful visualizations that drive
                         strategic decisions.
-                </p>
-                 <p>
-                      I bring a unique blend of skills across <strong>Artificial Intelligence, 
-                        IT, Cybersecurity, and AgriTech</strong>
-                       to create secure,
-                       efficient, and scalable data solutions. My approach goes beyond reporting. 
-                       I focus on developing innovative systems that solve complex challenges, 
-                       from optimizing resource management to driving sustainable solutions.
-                     </p>
-                 <p>
-                             I thrive on cross-functional collaboration and am eager to work with teams 
-                             and organizations that are passionate about
-                              using data to address real-world problems and create meaningful impact.
-                        </p>
+                    </p>
+                    <p>
+                        I bring a unique blend of skills across <strong>Artificial Intelligence, 
+                        IT, Cybersecurity, and AgriTech</strong> to create secure, efficient, and 
+                        scalable data solutions. My approach goes beyond reporting. I focus on 
+                        developing innovative systems that solve complex challenges, from optimizing 
+                        resource management to driving sustainable solutions.
+                    </p>
+                    <p>
+                        I thrive on cross-functional collaboration and am eager to work with teams 
+                        and organizations that are passionate about using data to address real-world 
+                        problems and create meaningful impact.
+                    </p>
                     
-                    <!-- EXPERTISE GRID: Visual representation of main skill areas -->
                     <div class="expertise-list">
                         <div class="expertise-item">
                             <i class="fas fa-chart-bar"></i>
@@ -195,33 +153,32 @@
                         </div>
                         <div class="expertise-item">
                             <i class="fas fa-robot"></i>
-                            <span>Tech</span>
+                            <span>AI & Tech</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersecurity</span>
                         </div>
                         <div class="expertise-item">
                             <i class="fas fa-seedling"></i>
-                            <span>Agritech Solutions</span>
+                            <span>AgriTech Solutions</span>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- PROJECTS SECTION: Portfolio of featured work -->
-    <!-- This section showcases actual projects and demonstrates capabilities -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-            </div>
-            
-            
 
-            <!-- PROJECTS GRID: Responsive grid of project cards -->
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-underline"></div>
+            
             <div class="projects-grid">
-                <!-- PROJECT CARD 1: AI Crop Disease Detection -->
+                <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image gradient-bg-1">
                         <i class="fas fa-brain"></i>
                     </div>
                     <div class="project-content">
@@ -234,20 +191,18 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
+                                <i class="fab fa-github"></i> Code
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Demo
+                            <a href="#" class="project-link live">
+                                <i class="fas fa-external-link-alt"></i> Demo
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- PROJECT CARD 2: Smart Farm Analytics -->
+                <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image gradient-bg-2">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <div class="project-content">
@@ -260,115 +215,58 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
+                                <i class="fab fa-github"></i> Code
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                            <a href="#" class="project-link live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROJECT CARD 3: The Log Analysis Tool -->
+                <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image gradient-bg-3">
                         <i class="fas fa-search"></i>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">The Log Analysis Tool</h3>
-                        <p class="project-description">A lightweight, browser-based tool for instantly analyzing log files to quickly identify errors, warnings, and patterns without any server-side processing.</p>
+                        <p class="project-description">A lightweight, browser-based tool for instantly analyzing log files to quickly identify errors, warnings, and patterns.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">ML</span>
-                            <span class="tag">Arduino</span>
+                            <span class="tag">Web App</span>
                         </div>
                         <div class="project-links">
-                                <a href="https://jaytech9.github.io/Logalyzer/" class="project-link" target="_blank">
-                                                             Logalyzer
-                                                                </a>
-                                <i class="fab fa-github"></i>
-                                Code
+                            <a href="https://github.com/Jaytech9" class="project-link">
+                                <i class="fab fa-github"></i> Code
                             </a>
-                           
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT CARD 4: Agricultural Data Platform -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Agricultural Data Platform</h3>
-                        <p class="project-description">Comprehensive data platform aggregating weather, soil, and market data to provide predictive insights for agricultural decisions.</p>
-                        <div class="project-tags">
-                            <span class="tag">Big Data</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Documentation
+                            <a href="https://jaytech9.github.io/Logalyzer/" class="project-link live" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Logalyzer
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROJECT CARD 5: Log Analysis AI Tool -->
+                <!-- Project 4 -->
                 <div class="project-card">
-                    <div class="project-image">
-                       <i class="fas fa-chart-pie"></i>
+                    <div class="project-image gradient-bg-4">
+                        <i class="fas fa-chart-pie"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">EDA Python</h3>
+                        <h3 class="project-title">EDA Python - Boston Housing</h3>
                         <p class="project-description">A comprehensive Exploratory Data Analysis (EDA) project analyzing the Boston Housing dataset using Python.</p>
                         <div class="project-tags">
-                            <span class="tag">Pandas </span>
-                            <span class="tag">Matplotlib </span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Matplotlib</span>
                             <span class="tag">Machine Learning</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
+                            <a href="https://github.com/Jaytech9" class="project-link">
+                                <i class="fab fa-github"></i> Code
                             </a>
-                            <a href="https://jaytech9.github.io/EDA-Boston/" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Try It
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT CARD 6: FarmTech Mobile App -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">FarmTech Mobile App</h3>
-                        <p class="project-description">Mobile application connecting farmers with agricultural experts, market prices, and weather information using real-time data.</p>
-                        <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">GPS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-play"></i>
-                                Video Demo
+                            <a href="https://jaytech9.github.io/EDA-Boston/" class="project-link live" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Try It
                             </a>
                         </div>
                     </div>
@@ -376,686 +274,337 @@
             </div>
         </div>
     </section>
-    <!-- CERTIFICATIONS SECTION: Professional certifications and credentials -->
-<section id="certifications" class="section certifications">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Certifications </h2>
-        </div>
-        
-        <!-- CERTIFICATIONS GRID: Modern card layout for certifications -->
-        <div class="certifications-grid">
-            <!-- CERTIFICATION CARD 1: Data Analytics -->
-            <div class="cert-card">
-                <div class="cert-header">
-                    <div class="cert-icon">
-                    <img src="/assets/gen.png" alt="Generation Ghana Logo" style="height: 30px; width: 30px;">
-                </div>
-                    <div class="cert-info">
-                        <h3>Data Analytics Certificate</h3>
-                        <div class="cert-issuer">Generation, Ghana </div>
-                    </div>
-                </div>
-                <div class="cert-details">
-                    <div class="cert-date">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Soon</span>
-                    </div>
-                    <p class="cert-description">
-                        Comprehensive program covering data analysis process, SQL, Tableau, R programming, and data visualization. Hands-on experience with real-world case studies and capstone projects.
-                    </p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">SQL</span>
-                        <span class="cert-skill-tag">Power BI</span>
-                        <span class="cert-skill-tag">Python Programming</span>
-                        <span class="cert-skill-tag">Data Visualization</span>
-                    </div>
-                </div>
 
-               <div class="cert-status">
-                    <div class="status-badge status-in-progress">
-                        <i class="fas fa-clock"></i>
-                        <span>In Progress</span>
-                    </div>
-
-                    <a href="#" class="cert-verify">
-                        <span>Verify</span>
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-                
-
-            <!-- CERTIFICATION CARD 2: Project Management -->
-            <div class="cert-card">
-                <div class="cert-header">
-                    <div class="cert-icon">
-                    <img src="/assets/learn-nexgent.png" alt="Learn Nexgent Logo" style="height: 30px; width: 30px;">
-                </div>
-                    <div class="cert-info">
-                        <h3>NGT Academy Community</h3>
-                        <div class="cert-issuer">CompTIA Network+ Certification</div>
-                    </div>
-                </div>
-                <div class="cert-details">
-                    <div class="cert-date">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Completed: January, 2025</span>
-                    </div>
-                    <p class="cert-description">
-                        foundational knowledge of Information Technology and networking systems.
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Agile</span>
-                        <span class="cert-skill-tag">Introduction to Networking</span>
-                        <span class="cert-skill-tag">IP Addressing & Subnetting</span>
-                        <span class="cert-skill-tag">Firewalls & VPNs</span>
-                    </div>
-                </div>
-
-                <div class="cert-status">
-                    <div class="status-badge status-completed">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Completed</span>
-                    </div>
-                   <a href="https://user-resources.nexgent.com/74474/achievements/certificates/46.png" class="cert-verify">
-                    <img src="/assets/learn-nexgent.png" alt="Learn Nexgent Logo" style="height: 16px; margin-right: 5px;">
-                    <span>Verify</span>
-                     <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    
-                </div>
-            </div>
-
-
-            <!-- CERTIFICATION CARD 3: AI/ML -->
-            <div class="cert-card">
-                <div class="cert-header">
-                    <div class="cert-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h3>AI for Everyone</h3>
-                        <div class="cert-issuer">DeepLearning.AI</div>
-                    </div>
-                </div>
-                <div class="cert-details">
-                    <div class="cert-date">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Soon</span>
-                    </div>
-                    <p class="cert-description">
-                        Non-technical course providing a broad understanding of AI technologies, their applications in business, and strategic implementation approaches across various industries.
-                    </p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Machine Learning</span>
-                        <span class="cert-skill-tag">AI Strategy</span>
-                        <span class="cert-skill-tag">Business Applications</span>
-                    </div>
-                </div>
-                <div class="cert-status">
-                    <div class="status-badge status-in-progress">
-                        <i class="fas fa-clock"></i>
-                        <span>In Progress</span>
-                    </div>
-                    <a href="#" class="cert-verify">
-                        <span>Verify</span>
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-
-          
-
-            <!-- CERTIFICATION CARD 4: Cybersecurity -->
-             <div class="cert-card">
-                <div class="cert-header">
-                    <div class="cert-icon">
-                    <img src="/assets/udemy.png" alt="Udemy Logo" style="height: 30px; width: 30px;">
-                </div>
-                    <div class="cert-info">
-                        <h3>Cyber Kill Chain</h3>
-                        <div class="cert-issuer">Udemy</div>
-                    </div>
-                </div>
-                <div class="cert-details">
-                    <div class="cert-date">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Completed: November, 2023</span>
-                    </div>
-                    <p class="cert-description">
-                        Currently pursuing comprehensive cybersecurity training covering network security, threat detection, incident response, and security best practices.
-                    </p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Reconassance in Kali</span>
-                        <span class="cert-skill-tag">Weaponization</span>
-                        <span class="cert-skill-tag">Delivery & Exploitation</span>
-                        
-                    </div>
-                </div>
-                <div class="cert-status">
-                    <div class="status-badge status-completed">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Completed</span>
-                    </div>
-                     <a href="https://user-resources.nexgent.com/74474/achievements/certificates/46.png" class="cert-verify">
-                    <img src="/assets/udemy.png" alt="Learn Nexgent Logo" style="height: 16px; margin-right: 5px;">
-                    <span>Verify</span>
-                     <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>   
-
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="section-underline"></div>
             
+            <div class="certifications-grid">
+                <!-- Certification 1 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <img src="assets/gen.png" alt="Generation Ghana Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Data Analytics Certificate</h3>
+                            <div class="cert-issuer">Generation, Ghana</div>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Soon</span>
+                        </div>
+                        <p class="cert-description">
+                            Comprehensive program covering data analysis process, SQL, Tableau, R programming, and data visualization.
+                        </p>
+                        <div class="cert-skills">
+                            <span class="cert-skill-tag">SQL</span>
+                            <span class="cert-skill-tag">Power BI</span>
+                            <span class="cert-skill-tag">Python Programming</span>
+                            <span class="cert-skill-tag">Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="cert-status">
+                        <div class="status-badge status-in-progress">
+                            <i class="fas fa-clock"></i>
+                            <span>In Progress</span>
+                        </div>
+                        <a href="#" class="cert-verify">
+                            <span>Verify</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
 
-            <!-- CERTIFICATION CARD 5: Project Management
-            <div class="cert-card">
-                <div class="cert-header">
-                    <div class="cert-icon">
-                    <img src="/assets/learn-nexgent.png" alt="Learn Nexgent Logo" style="height: 30px; width: 30px;">
-                </div>
-                    <div class="cert-info">
-                        <h3>NGT Academy Community</h3>
-                        <div class="cert-issuer">CompTIA Network+ Certification</div>
+                <!-- Certification 2 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <img src="assets/learn-nexgent.png" alt="Learn Nexgent Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="cert-info">
+                            <h3>NGT Academy Community</h3>
+                            <div class="cert-issuer">CompTIA Network+ Certification</div>
+                        </div>
                     </div>
-                </div>
-                <div class="cert-details">
-                    <div class="cert-date">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Completed: January, 2025</span>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Completed: January, 2025</span>
+                        </div>
+                        <p class="cert-description">
+                            Foundational knowledge of Information Technology and networking systems.
+                        </p>
+                        <div class="cert-skills">
+                            <span class="cert-skill-tag">Networking</span>
+                            <span class="cert-skill-tag">IP Addressing</span>
+                            <span class="cert-skill-tag">Firewalls & VPNs</span>
+                        </div>
                     </div>
-                    <p class="cert-description">
-                        foundational knowledge of Information Technology and networking systems.
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Agile</span>
-                        <span class="cert-skill-tag">Introduction to Networking</span>
-                        <span class="cert-skill-tag">IP Addressing & Subnetting</span>
-                        <span class="cert-skill-tag">Firewalls & VPNs</span>
+                    <div class="cert-status">
+                        <div class="status-badge status-completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Completed</span>
+                        </div>
+                        <a href="https://user-resources.nexgent.com/74474/achievements/certificates/46.png" class="cert-verify" target="_blank">
+                            <span>Verify</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="cert-status">
-                    <div class="status-badge status-completed">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Completed</span>
+                <!-- Certification 3 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>AI for Everyone</h3>
+                            <div class="cert-issuer">DeepLearning.AI</div>
+                        </div>
                     </div>
-                   <a href="https://user-resources.nexgent.com/74474/achievements/certificates/46.png" class="cert-verify">
-                    <img src="/assets/learn-nexgent.png" alt="Learn Nexgent Logo" style="height: 16px; margin-right: 5px;">
-                    <span>Verify</span>
-                     <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Soon</span>
+                        </div>
+                        <p class="cert-description">
+                            Non-technical course providing a broad understanding of AI technologies and their applications in business.
+                        </p>
+                        <div class="cert-skills">
+                            <span class="cert-skill-tag">Machine Learning</span>
+                            <span class="cert-skill-tag">AI Strategy</span>
+                            <span class="cert-skill-tag">Business Applications</span>
+                        </div>
+                    </div>
+                    <div class="cert-status">
+                        <div class="status-badge status-in-progress">
+                            <i class="fas fa-clock"></i>
+                            <span>In Progress</span>
+                        </div>
+                        <a href="#" class="cert-verify">
+                            <span>Verify</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>  -->
+
+                <!-- Certification 4 -->
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <img src="assets/udemy.png" alt="Udemy Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Cyber Kill Chain</h3>
+                            <div class="cert-issuer">Udemy</div>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Completed: November, 2023</span>
+                        </div>
+                        <p class="cert-description">
+                            Comprehensive cybersecurity training covering network security, threat detection, and incident response.
+                        </p>
+                        <div class="cert-skills">
+                            <span class="cert-skill-tag">Reconnaissance</span>
+                            <span class="cert-skill-tag">Weaponization</span>
+                            <span class="cert-skill-tag">Exploitation</span>
+                        </div>
+                    </div>
+                    <div class="cert-status">
+                        <div class="status-badge status-completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Completed</span>
+                        </div>
+                        <a href="#" class="cert-verify">
+                            <span>Verify</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-   <!-- CONTACT SECTION: Modern professional contact design -->
-</section>
-   <!-- CONTACT SECTION: Modern professional contact design -->
-<section id="contact" class="section contact-section">
-    <div class="container">
-        <div class="section-header">
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
             <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-wrapper">
-            <!-- LEFT SIDE: Contact information cards -->
-            <div class="contact-info-grid">
-                <!-- Email Card -->
-                <div class="contact-card">
-                    <div class="contact-card-icon email-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h4>Email</h4>
-                        <a href="mailto:joneskwamehene@gmail.com" class="contact-link">
-                            joneskwamehene@gmail.com
-                        </a>
-                    </div>
-                </div>
-
-                <!-- LinkedIn Card -->
-                <div class="contact-card">
-                    <div class="contact-card-icon linkedin-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h4>LinkedIn</h4>
-                        <a href="https://www.linkedin.com/in/jones-kwamehene-885a6a25a" class="contact-link" target="_blank">
-                            Connect with me
-                        </a>
-                    </div>
-                </div>
-
-                <!-- GitHub Card -->
-                <div class="contact-card">
-                    <div class="contact-card-icon github-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h4>GitHub</h4>
-                        <a href="https://github.com/Jaytech9" class="contact-link" target="_blank">
-                            @JonesKwamehene
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="section-underline"></div>
             
-            <!-- RIGHT SIDE: Modern contact form -->
-            <div class="contact-form-container">
-                <form class="modern-contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="modern-form-input" placeholder="Your full name" required>
+            <div class="contact-wrapper">
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <div class="contact-card-icon email-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Email</h4>
+                            <a href="mailto:joneskwamehene@gmail.com" class="contact-link">
+                                joneskwamehene@gmail.com
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="modern-form-input" placeholder="your.email@example.com" required>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon linkedin-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/jones-kwamehene-885a6a25a" class="contact-link" target="_blank">
+                                Connect with me
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="modern-form-input" placeholder="What's this about?" required>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon github-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/Jaytech9" class="contact-link" target="_blank">
+                                @Jaytech9
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="modern-form-input modern-form-textarea" placeholder="Hi! I saw your portfolio and..." required></textarea>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="modern-submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>Send Message</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- FOOTER: Final section with links and copyright -->
-    <!-- This provides additional navigation and legal information -->
-    <!-- FOOTER: Professional footer with organized links and information -->
-<footer class="footer" > 
-    <div class="container">
-        <!-- Main footer content -->
-        <div class="footer-content">
-            <!-- Brand Section -->
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <img src="assets/jones log.png" alt="Jones Logo" class="footer-logo-img">
                 </div>
-                <h3 class="footer-brand-name">Jones Kwamehene</h3>
-                <p class="footer-brand-description">
-                    Data Analyst & Tech Professional specializing in Data Analysis,Ai, Cybersecurity, and AgriTech solutions.
-                </p>
-                <div class="footer-social-links">
-                    <a href="https://www.linkedin.com/in/jones-kwamehene-885a6a25a" class="footer-social-link" aria-label="LinkedIn" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="footer-social-link" aria-label="GitHub" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:joneskwamehene@gmail.com" class="footer-social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Quick Links Section -->
-            <div class="footer-section">
-                <h4 class="footer-section-title">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="#home" class="footer-link">Home</a></li>
-                    <li><a href="#about" class="footer-link">About</a></li>
-                     <li><a href="#projects" class="footer-link">Projects</a></li>
-                    <li><a href="#certifications" class="footer-link">Certifications</a></li>
-                    <li><a href="#contact" class="footer-link">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Services Section -->
-            <div class="footer-section">
-                <h4 class="footer-section-title">Services</h4>
-                <ul class="footer-links">
-                    
-                    <li><a href="#" class="footer-link">Data Analysis</a></li>
-                     <li><a href="#" class="footer-link">Full-Stack Web Development</a></li>
-                    <li><a href="#" class="footer-link">IT Consulting</a></li>
-                    <li><a href="#" class="footer-link">Agritech Solutions</a></li>
-                    <li><a href="#" class="footer-link">Cybersecurity</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info Section -->
-            <div class="footer-section">
-                <h4 class="footer-section-title">Get In Touch</h4>
-                <div class="footer-contact-info">
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:joneskwamehene@gmail.com" class="footer-contact-link">
-                            joneskwamehene@gmail.com
-                        </a>
-                    </div>
-                    
-                    <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span class="footer-contact-text">Accra, Ghana</span>
+                
+                <div class="contact-form-container">
+                    <div class="modern-contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="modern-form-input" placeholder="Your full name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="modern-form-input" placeholder="your.email@example.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="modern-form-input" placeholder="What's this about?" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="modern-form-input modern-form-textarea" placeholder="Hi! I saw your portfolio and..." required></textarea>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="modern-submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Footer bottom section -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p class="footer-copyright">
-                    © 2025 Jones Yaw Kwamehene. All rights reserved.
-                </p>
-                <div class="footer-bottom-links">
-                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
-                    <span class="footer-divider">|</span>
-                    <a href="#" class="footer-bottom-link">Terms of Service</a>
-                    <span class="footer-divider">|</span>
-                    <span class="footer-built-with">Built with passion for technology</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-    <!-- JAVASCRIPT: All interactive functionality -->
-    <script>
-        /* ===== THEME TOGGLE FUNCTIONALITY ===== */
-        // This section handles switching between light and dark themes
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-
-        // Check for saved theme preference or default to 'light'
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', savedTheme);
-
-        // Handle theme toggle button clicks
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            // Apply new theme and save preference
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Add smooth transition effect
-            body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-            setTimeout(() => {
-                body.style.transition = '';
-            }, 300);
-        });
-
-        /* ===== MOBILE NAVIGATION TOGGLE ===== */
-        // This section handles the mobile hamburger menu
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        // Toggle mobile menu visibility
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Close mobile menu when clicking on a navigation link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            });
-        });
-
-        /* ===== SMOOTH SCROLLING FOR NAVIGATION LINKS ===== */
-        // This creates smooth scrolling when clicking navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    // Calculate offset to account for fixed navbar height
-                    const offsetTop = target.offsetTop - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        /* ===== NAVBAR BACKGROUND ON SCROLL ===== */
-        // This changes navbar opacity based on scroll position
-        const navbar = document.querySelector('.navbar');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.style.background = body.getAttribute('data-theme') === 'dark' 
-                    ? 'rgba(15, 23, 42, 0.95)' 
-                    : 'rgba(255, 255, 255, 0.95)';
-            } else {
-                navbar.style.background = body.getAttribute('data-theme') === 'dark' 
-                    ? 'rgba(15, 23, 42, 0.9)' 
-                    : 'rgba(255, 255, 255, 0.9)';
-            }
-        });
-
-        /* ===== ANIMATE SKILL PROGRESS BARS ON SCROLL ===== */
-        // This animates the skill progress bars when they come into view
-        // Observe the certifications section
-const certificationsSection = document.getElementById('certifications');
-if (certificationsSection) {
-    skillsObserver.observe(certificationsSection);
-}
-
-        // Create intersection observer for skills section
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressBars = entry.target.querySelectorAll('.skill-progress');
-                    progressBars.forEach(bar => {
-                        const width = bar.style.width;
-                        bar.style.width = '0%';
-                        setTimeout(() => {
-                            bar.style.width = width;
-                        }, 100);
-                    });
-                }
-            });
-        }, observerOptions);
-
-        // Observe the skills section
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection) {
-            skillsObserver.observe(skillsSection);
-        }
-
-        /* ===== FADE IN ANIMATION ON SCROLL ===== */
-        // This adds fade-in animations as elements come into view
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections and cards for fade-in animation
-        document.querySelectorAll('.section, .project-card, .skill-category').forEach(el => {
-            fadeObserver.observe(el);
-        });
-
-        /* ===== CONTACT FORM HANDLING ===== */
-        // This handles contact form submission with loading states
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const submitBtn = contactForm.querySelector('.form-submit');
-            const originalText = submitBtn.innerHTML;
-            
-            // Show loading state
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission (replace with actual form handling)
-            setTimeout(() => {
-                // Success state
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitBtn.style.background = 'var(--success-color)';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                }, 3000);
-                
-                // Show success message
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                
-            }, 2000);
-        });
-
-        /* ===== TYPING EFFECT FOR HERO TITLE ===== */
-        // This creates a typewriter effect for the main title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Apply typing effect when page loads
-        window.addEventListener('load', () => {
-            const heroTitle = document.querySelector('.hero-text h1');
-            if (heroTitle) {
-                const originalText = heroTitle.textContent;
-                typeWriter(heroTitle, originalText, 80);
-            }
-        });
-
-        /* ===== ACTIVE NAVIGATION LINK HIGHLIGHTING ===== */
-        // This highlights the current section in the navigation
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (pageYOffset >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        /* ===== PROJECT CARD HOVER EFFECTS ===== */
-        // This adds enhanced hover effects to project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(-10px)';
-            });
-        });
-
-        /* ===== PERFORMANCE OPTIMIZATION ===== */
-        // Lazy load images if any are present
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        /* ===== CONSOLE EASTER EGG ===== */
-        // This adds a fun message for developers who check the console
-        console.log(`
-        🚀 Welcome to my portfolio!
-        
-        Built with:
-        - Semantic HTML5
-        - Modern CSS3 (Grid, Flexbox, Custom Properties)
-        - Vanilla JavaScript (ES6+)
-        - Font Awesome Icons
-        - Google Fonts
-        
-        Features:
-        ✅ Responsive Design
-        ✅ Dark/Light Theme
-        ✅ Smooth Animations
-        ✅ Performance Optimized
-        ✅ Accessibility Friendly
-        
-        Interested in the code? Check out my GitHub!
-        `);
-
-        function toggleNavDropdown() {
-    document.getElementById("navDropdownMenu").classList.toggle("show");
-}
-
-function closeNavDropdown() {
-    // A utility function to ensure the menu closes when a link is clicked
-    document.getElementById("navDropdownMenu").classList.remove("show");
-}
-
-// Global click handler to close the menu if the user clicks anywhere else
-window.addEventListener('click', function(event) {
-    const dropdown = document.getElementById("navDropdownMenu");
-    const button = document.getElementById("resourcesBtn");
-
-    if (dropdown && button) {
-        // If the click is NOT on the button AND NOT inside the menu
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.classList.remove('show');
-        }
-    }
-});
-    </script>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/jones log.png" alt="Jones Logo" class="footer-logo-img">
+                    </div>
+                    <h3 class="footer-brand-name">Jones Kwamehene</h3>
+                    <p class="footer-brand-description">
+                        Data Analyst & Tech Professional specializing in Data Analysis, AI, Cybersecurity, and AgriTech solutions.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://www.linkedin.com/in/jones-kwamehene-885a6a25a" class="footer-social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Jaytech9" class="footer-social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:joneskwamehene@gmail.com" class="footer-social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#projects" class="footer-link">Projects</a></li>
+                        <li><a href="#certifications" class="footer-link">Certifications</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Data Analysis</a></li>
+                        <li><a href="#" class="footer-link">IT Consulting</a></li>
+                        <li><a href="#" class="footer-link">Agritech Solutions</a></li>
+                        <li><a href="#" class="footer-link">Cybersecurity</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Get In Touch</h4>
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:joneskwamehene@gmail.com" class="footer-contact-link">
+                                joneskwamehene@gmail.com
+                            </a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="footer-contact-text">Accra, Ghana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        © 2025 Jones Yaw Kwamehene. All rights reserved.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <span class="footer-divider">|</span>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                        <span class="footer-divider">|</span>
+                        <span class="footer-built-with">Built with passion for technology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
