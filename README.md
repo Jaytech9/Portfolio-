@@ -91,7 +91,7 @@ This project is proudly licensed under the **MIT License**. See the `LICENSE` fi
 
 ### 🔗 Connect With Me
 
-* 🌍 **Live Site:** [jaytech9.github.io/portfolio](https://jaytech9.github.io/portfolio)
+* 🌍 **Live Site:** [jaytech9.github.io/portfolio](https://jaytech9.github.io/Portfolio-/)
 * 💼 **LinkedIn:** [Jones Yaw Kwamehene](https://www.linkedin.com/in/jones-yaw-kwamehene/) *(Replace with your actual LinkedIn URL)*
 * 🐙 **GitHub:** [@Jaytech9](https://github.com/Jaytech9)
 
