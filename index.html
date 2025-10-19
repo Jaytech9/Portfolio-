@@ -435,89 +435,94 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="section-underline"></div>
-            
-            <div class="contact-wrapper">
-                <div class="contact-info-grid">
-                    <div class="contact-card">
-                        <div class="contact-card-icon email-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-card-content">
-                            <h4>Email</h4>
-                            <a href="mailto:joneskwamehene@gmail.com" class="contact-link">
-                                joneskwamehene@gmail.com
-                            </a>
-                        </div>
+   <section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="section-underline"></div>
+        
+        <div class="contact-wrapper">
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-card-icon email-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-
-                    <div class="contact-card">
-                        <div class="contact-card-icon linkedin-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </div>
-                        <div class="contact-card-content">
-                            <h4>LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/jones-kwamehene-885a6a25a" class="contact-link" target="_blank">
-                                Connect with me
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-card-icon github-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-card-content">
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/Jaytech9" class="contact-link" target="_blank">
-                                @Jaytech9
-                            </a>
-                        </div>
+                    <div class="contact-card-content">
+                        <h4>Email</h4>
+                        <a href="mailto:joneskwamehene@gmail.com" class="contact-link">
+                            joneskwamehene@gmail.com
+                        </a>
                     </div>
                 </div>
-                
-                <div class="contact-form-container">
-                    <div class="modern-contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" name="name" class="modern-form-input" placeholder="Your full name" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" name="email" class="modern-form-input" placeholder="your.email@example.com" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" id="subject" name="subject" class="modern-form-input" placeholder="What's this about?" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea id="message" name="message" class="modern-form-input modern-form-textarea" placeholder="Hi! I saw your portfolio and..." required></textarea>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="modern-submit-btn">
-                            <i class="fas fa-paper-plane"></i>
-                            <span>Send Message</span>
-                        </button>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon linkedin-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-card-content">
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/jones-kwamehene-885a6a25a" class="contact-link" target="_blank">
+                            Connect with me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon github-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-card-content">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/Jaytech9" class="contact-link" target="_blank">
+                            @Jaytech9
+                        </a>
                     </div>
                 </div>
             </div>
+            
+            <div class="contact-form-container">
+                <form 
+                    class="modern-contact-form" 
+                    id="contactForm" 
+                    action="https://formspree.io/f/xpwynwyb" 
+                    method="POST"
+                >
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="modern-form-input" placeholder="Your full name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="modern-form-input" placeholder="your.email@example.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="_subject" class="modern-form-input" placeholder="What's this about?" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="modern-form-input modern-form-textarea" placeholder="Hi! I saw your portfolio and..." required></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="modern-submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
