@@ -20,6 +20,7 @@ const texts = [
     'AI Enthusiast',
     'Cybersecurity Specialist',
     'AgriTech Innovator',
+     'Creative Designer',
     'Full-Stack Developer'
 ];
 let textIndex = 0;
